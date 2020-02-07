@@ -1,0 +1,21 @@
+import 'dart:io';
+
+void main(){
+  stdout.write ( 'Masukkan Alas : ');
+  String strAlas = stdin.readLineSync();
+
+  stdout.write ( 'Masukan Tinggi : ');
+  String strTinggi = stdin.readLineSync();
+
+  double Alas = double.tryParse(strAlas) ?? 0.0;
+  double Tinggi = double.tryParse(strTinggi) ?? 0.0;
+
+  double Luas = hitungLuas(Alas,Tinggi);
+
+  print('Luas Jajargenjang = $Luas');
+  
+  }
+
+  double hitungLuas(double Alas, double Tinggi) {
+    return Alas*Tinggi ;
+}
